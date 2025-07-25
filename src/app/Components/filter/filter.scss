@@ -32,6 +32,15 @@
       padding: 0.8rem 2rem 1rem;
       border: 0.1rem solid color.$neutral-600;
       background-color: color.$neutral-700;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      &:hover,
+      &.active {
+        color: color.$neutral-900;
+        background-color: color.$red-400;
+        border-color: color.$red-400;
+      }
     }
   }
 }
