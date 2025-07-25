@@ -1,0 +1,53 @@
+@use "../../../scss/mixins" as mixin;
+@use "../../../scss/variables" as color;
+
+.filter {
+  margin: 4rem 0 3.2rem;
+
+  &-container {
+    max-width: 117rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 2.4rem;
+  }
+
+  &-title {
+    @include mixin.text-preset-1;
+    text-transform: capitalize;
+    color: color.$neutral;
+  }
+
+  &-btns-group {
+    display: flex;
+    column-gap: 1.2rem;
+    align-items: center;
+
+    &--btn {
+      @include mixin.text-preset-3;
+      color: color.$neutral;
+      text-transform: capitalize;
+      border-radius: 99.9rem;
+      padding: 0.8rem 2rem 1rem;
+      border: 0.1rem solid color.$neutral-600;
+      background-color: color.$neutral-700;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    &-container {
+      flex-direction: row;
+      justify-content: space-between;
+      row-gap: initial;
+    }
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .filter {
+    margin: 6.4rem 0 3.2rem;
+  }
+}
