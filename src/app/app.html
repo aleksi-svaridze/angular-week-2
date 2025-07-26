@@ -1,3 +1,39 @@
 <app-navbar />
 <app-filter />
 <app-main />
+
+<!-- <div
+  style="
+    color: white;
+    font-size: 24px;
+    border: 2px solid white;
+    border-radius: 10px;
+    margin-top: 100px;
+    padding: 20px;
+  "
+>
+  <p>title</p>
+  - {{ book.title }}
+  <p>Author</p>
+  - {{ book.author }}
+  <p>Price</p>
+  - {{ `$${book.price}` }}
+  <p [class.active]="book.year > 1991">Year</p>
+  - {{ book.year }}
+  <p>Quantity</p>
+  -
+  <span [style.background]="book.quantity > 0 ? 'green' : 'red'">{{
+    book.quantity > 0 ? book.quantity + "item" : "out of stock"
+  }}</span>
+
+  <p>New price</p>
+  -
+  <span>{{ `$${calculate()}` }}</span>
+  <p>You save - ${{ book.price - calculate() }}</p>
+  <button
+    style="width: 300px; height: 50px; margin-top: 20px"
+    [disabled]="!book.quantity"
+  >
+    Buy now
+  </button>
+</div> -->
