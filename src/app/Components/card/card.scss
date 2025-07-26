@@ -8,11 +8,13 @@
   border: 0.1rem solid color.$neutral-600;
   overflow: hidden;
   padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   &-content {
     display: flex;
     column-gap: 1.6rem;
-    margin-bottom: 2.4rem;
 
     &__image {
       width: 6rem;
