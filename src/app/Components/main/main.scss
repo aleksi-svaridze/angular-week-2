@@ -1,3 +1,6 @@
+@use "../../../scss/variables" as color;
+@use "../../../scss/mixins" as mixin;
+
 .main {
   &-container {
     max-width: 117rem;
@@ -20,6 +23,84 @@
   .main {
     &-container {
       grid-template-columns: repeat(3, 1fr);
+    }
+  }
+}
+
+.card {
+  height: 20rem;
+  background-color: color.$neutral-800;
+  border-radius: 2rem;
+  border: 0.1rem solid color.$neutral-600;
+  overflow: hidden;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-content {
+    display: flex;
+    column-gap: 1.6rem;
+
+    &__image {
+      width: 6rem;
+      height: 6rem;
+      border-radius: 1rem;
+    }
+
+    &__text {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.8rem;
+      &--title {
+        color: color.$neutral;
+        @include mixin.text-preset-2;
+      }
+
+      &--description {
+        @include mixin.text-preset-5;
+        color: color.$neutral-300;
+      }
+    }
+  }
+
+  &-settings {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__remove-btn {
+      padding: 0.8rem 1.6rem;
+      border-radius: 99.9rem;
+      border: 0.1rem solid color.$neutral-600;
+      @include mixin.text-preset-6;
+      color: color.$neutral;
+      text-transform: capitalize;
+      cursor: pointer;
+    }
+
+    &__toggle-btn {
+      width: 3.6rem;
+      height: 2rem;
+      border-radius: 99.9rem;
+      background-color: color.$red-400;
+      padding: 0.2rem;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      cursor: pointer;
+
+      &::after {
+        content: "";
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 99.9rem;
+        background-color: color.$neutral;
+        transition: all 2s;
+      }
+    }
+    &__toggle-btn:hover {
+      justify-content: flex-end;
     }
   }
 }

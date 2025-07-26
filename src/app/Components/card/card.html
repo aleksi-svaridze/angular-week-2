@@ -1,13 +1,11 @@
+@for (extension of extensions; track $index) {
 <div class="card">
   <div class="card-content">
-    <img
-      src="assets/card_images/devlens_icon.png"
-      class="card-content__image"
-    />
+    <img [src]="extension.imageUrl" class="card-content__image" />
     <div class="card-content__text">
-      <h3 class="card-content__text--title">DevLens</h3>
+      <h3 class="card-content__text--title">{{ extension.title }}</h3>
       <p class="card-content__text--description">
-        Quickly inspect page layouts and visualize element boundaries.
+        {{ extension.description }}
       </p>
     </div>
   </div>
@@ -16,3 +14,4 @@
     <div class="card-settings__toggle-btn"></div>
   </div>
 </div>
+}

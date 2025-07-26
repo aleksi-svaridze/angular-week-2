@@ -1,16 +1,21 @@
 <main class="main">
   <div class="main-container">
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
-    <app-card />
+    @for (extension of extensions; track $index) {
+    <div class="card">
+      <div class="card-content">
+        <img [src]="extension.imageUrl" class="card-content__image" />
+        <div class="card-content__text">
+          <h3 class="card-content__text--title">{{ extension.title }}</h3>
+          <p class="card-content__text--description">
+            {{ extension.description }}
+          </p>
+        </div>
+      </div>
+      <div class="card-settings">
+        <div class="card-settings__remove-btn">remove</div>
+        <div class="card-settings__toggle-btn"></div>
+      </div>
+    </div>
+    }
   </div>
 </main>
