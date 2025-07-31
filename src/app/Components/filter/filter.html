@@ -2,9 +2,45 @@
   <div class="filter-container">
     <h1 class="filter-title">extensions list</h1>
     <div class="filter-btns-group">
-      <div class="filter-btns-group--btn active">all</div>
-      <div class="filter-btns-group--btn">active</div>
-      <div class="filter-btns-group--btn">inactive</div>
+      <label class="filter-btns-group--btn" [class.active]="inStock === 'all'">
+        <input
+          style="display: none"
+          type="radio"
+          value="all"
+          name="stock"
+          (change)="changeFilterType()"
+          [(ngModel)]="inStock"
+        />
+        all</label
+      >
+      <label
+        class="filter-btns-group--btn"
+        [class.active]="inStock === 'active'"
+      >
+        <input
+          style="display: none"
+          type="radio"
+          value="active"
+          name="stock"
+          (change)="changeFilterType()"
+          [(ngModel)]="inStock"
+        />
+        Active</label
+      >
+      <label
+        class="filter-btns-group--btn"
+        [class.active]="inStock === 'in-active'"
+      >
+        <input
+          style="display: none"
+          type="radio"
+          value="inActive"
+          name="stock"
+          (change)="changeFilterType()"
+          [(ngModel)]="inStock"
+        />
+        Inactive</label
+      >
     </div>
   </div>
 </div>

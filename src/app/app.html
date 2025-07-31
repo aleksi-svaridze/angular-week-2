@@ -1,3 +1,3 @@
 <app-navbar />
-<app-filter />
-<app-main />
+<app-filter (filter)="getFilteredType($event)" />
+<app-main [extensions]="extensions" />
