@@ -9,4 +9,8 @@ import { Iextentions } from '../../Interfaces/Extensions.interface';
 export class Main {
   @Input()
   extensions!: Iextentions[];
+
+  makeActive(item: Iextentions): void {
+    item.isActive = !item.isActive;
+  }
 }
