@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Card } from '../card/card';
 
 interface Iextentions {
   id: number;
@@ -11,7 +10,7 @@ interface Iextentions {
 
 @Component({
   selector: 'app-main',
-  imports: [Card],
+  imports: [],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })

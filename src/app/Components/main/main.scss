@@ -83,24 +83,28 @@
       width: 3.6rem;
       height: 2rem;
       border-radius: 99.9rem;
-      background-color: color.$red-400;
+      background-color: color.$neutral-600;
       padding: 0.2rem;
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
       cursor: pointer;
+      transition: all 0.2s;
 
       &::after {
         content: "";
+        display: block;
         width: 1.6rem;
         height: 1.6rem;
         border-radius: 99.9rem;
         background-color: color.$neutral;
-        transition: all 2s;
+        transition: all 0.2s;
       }
-    }
-    &__toggle-btn:hover {
-      justify-content: flex-end;
+
+      &.active {
+        background-color: color.$red-400;
+      }
+
+      &.active::after {
+        transform: translateX(100%);
+      }
     }
   }
 }
