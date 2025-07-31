@@ -13,7 +13,10 @@
       </div>
       <div class="card-settings">
         <div class="card-settings__remove-btn">remove</div>
-        <div class="card-settings__toggle-btn"></div>
+        <div
+          class="card-settings__toggle-btn"
+          [class.active]="extension.isActive"
+        ></div>
       </div>
     </div>
     }
