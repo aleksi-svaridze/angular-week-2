@@ -10,7 +10,18 @@ export class Main {
   @Input()
   extensions!: Iextentions[];
 
+  newExtensions: Iextentions[] = this.extensions;
+
   makeActive(item: Iextentions): void {
     item.isActive = !item.isActive;
+  }
+
+  removeExtension(id: number) {
+    console.log(id);
+    this.newExtensions = this.extensions.filter(
+      (itemId: Iextentions) => itemId.id !== id
+    );
+    this.extensions = this.newExtensions;
+    return this.extensions;
   }
 }
