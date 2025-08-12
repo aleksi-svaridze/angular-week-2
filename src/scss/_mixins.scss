@@ -8,7 +8,7 @@
 }
 @mixin text-preset-2 {
   font: {
-    font-weight: 700;
+    weight: 700;
     size: 2rem;
   }
   line-height: 120%;
@@ -16,7 +16,7 @@
 }
 @mixin text-preset-3 {
   font: {
-    font-weight: 400;
+    weight: 400;
     size: 2rem;
   }
   line-height: 140%;
@@ -24,7 +24,7 @@
 }
 @mixin text-preset-4 {
   font: {
-    font-weight: 500;
+    weight: 500;
     size: 2rem;
   }
   line-height: 140%;
@@ -32,7 +32,7 @@
 }
 @mixin text-preset-5 {
   font: {
-    font-weight: 400;
+    weight: 400;
     size: 1.6rem;
   }
   line-height: 140%;
@@ -40,7 +40,7 @@
 }
 @mixin text-preset-6 {
   font: {
-    font-weight: 500;
+    weight: 500;
     size: 1.6rem;
   }
   line-height: 140%;

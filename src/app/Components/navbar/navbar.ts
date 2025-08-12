@@ -5,4 +5,10 @@ import { Component } from '@angular/core';
   templateUrl: './navbar.html',
   styleUrl: './navbar.scss',
 })
-export class Navbar {}
+export class Navbar {
+  public isDark: boolean = true;
+
+  changeThemeIcon() {
+    this.isDark = !this.isDark;
+  }
+}

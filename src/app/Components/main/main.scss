@@ -68,6 +68,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    min-height: 4.041rem;
 
     &__remove-btn {
       padding: 0.8rem 1.6rem;
@@ -75,8 +76,23 @@
       border: 0.1rem solid color.$neutral-600;
       @include mixin.text-preset-6;
       color: color.$neutral;
+      background-color: color.$neutral-800;
       text-transform: capitalize;
       cursor: pointer;
+      transition: all 0.2s;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px color.$neutral-900, 0 0 0 4px color.$red-400;
+        border: none;
+        background-color: color.$neutral-600;
+      }
+
+      &:hover {
+        background-color: color.$red-400;
+        border-color: color.$black;
+        color: color.$neutral-900;
+      }
     }
 
     &__toggle-btn {
@@ -95,6 +111,8 @@
         height: 1.6rem;
         border-radius: 99.9rem;
         background-color: color.$neutral;
+        box-shadow: 0 1px 3px 0 rgba(10, 13, 18, 0.149),
+          0 1px 2px -1px rgba(10, 13, 18, 0.15);
         transition: all 0.2s;
       }
 
@@ -103,7 +121,14 @@
       }
 
       &.active::after {
+        box-shadow: 0 1px 3px 0 rgba(10, 13, 18, 0.3),
+          0 1px 2px -1px rgba(10, 13, 18, 0.3);
         transform: translateX(100%);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px color.$neutral-900, 0 0 0 4px color.$red-400;
       }
     }
   }

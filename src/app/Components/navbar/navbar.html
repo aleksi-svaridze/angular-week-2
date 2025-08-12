@@ -2,8 +2,12 @@
   <div class="container">
     <img src="assets/Logo.png" class="logo" />
 
-    <div class="theme-switch-btn">
-      <img src="assets/Settings_Icon.png" class="icon" alt="" />
+    <div class="theme-switch-btn" tabindex="0" (click)="changeThemeIcon()">
+      <img
+        [src]="isDark ? 'assets/sun_icon.png' : 'assets/moon-icon.png'"
+        class="icon"
+        alt=""
+      />
     </div>
   </div>
 </header>

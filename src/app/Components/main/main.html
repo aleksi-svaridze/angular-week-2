@@ -15,10 +15,12 @@
         <div
           class="card-settings__remove-btn"
           (click)="removeExtension(extension.id)"
+          tabindex="0"
         >
           remove
         </div>
         <div
+          tabindex="0"
           class="card-settings__toggle-btn"
           [class.active]="extension.isActive"
           (click)="makeActive(extension)"

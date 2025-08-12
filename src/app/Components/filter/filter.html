@@ -2,7 +2,11 @@
   <div class="filter-container">
     <h1 class="filter-title">extensions list</h1>
     <div class="filter-btns-group">
-      <label class="filter-btns-group--btn" [class.active]="inStock === 'all'">
+      <label
+        class="filter-btns-group--btn"
+        tabindex="0"
+        [class.active]="inStock === 'all'"
+      >
         <input
           style="display: none"
           type="radio"
@@ -14,6 +18,7 @@
         all</label
       >
       <label
+        tabindex="0"
         class="filter-btns-group--btn"
         [class.active]="inStock === 'active'"
       >
@@ -28,6 +33,7 @@
         Active</label
       >
       <label
+        tabindex="0"
         class="filter-btns-group--btn"
         [class.active]="inStock === 'in-active'"
       >

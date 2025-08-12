@@ -24,6 +24,18 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.2s;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px vars.$neutral-900, 0 0 0 4px vars.$red-400;
+        background-color: vars.$neutral-600;
+      }
+
+      &:hover {
+        background-color: vars.$neutral-600;
+      }
 
       .icon {
         width: 2.2rem;
