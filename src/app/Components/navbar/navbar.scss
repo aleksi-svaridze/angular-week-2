@@ -9,7 +9,7 @@
     justify-content: space-between;
     padding: 0.8rem 1.2rem;
     border-radius: 1rem;
-    background-color: vars.$neutral-800;
+    background-color: var(--navbar-bg);
 
     .logo img {
       height: 4.1rem;
@@ -19,7 +19,7 @@
       width: 5rem;
       height: 5rem;
       border-radius: 1.2rem;
-      background-color: vars.$neutral-700;
+      background-color: var(--theme-switch-btn-bg);
 
       display: flex;
       align-items: center;
@@ -34,7 +34,7 @@
       }
 
       &:hover {
-        background-color: vars.$neutral-600;
+        background-color: var(--theme-switch-btn-hover-bg);
       }
 
       .icon {

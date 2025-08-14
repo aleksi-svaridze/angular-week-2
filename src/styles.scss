@@ -1,5 +1,54 @@
-@use "./scss/variables" as vars;
+// @use "./scss/variables" as color;
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+$neutral-900: #091540;
+$neutral-800: #202535;
+$neutral-700: #2f364b;
+$neutral-600: #535868; // 300
+$neutral-300: #c6c6c6;
+$neutral-200: #d6e2f5;
+$neutral-100: #eeeeee;
+$neutral: #fbfdfe; // neutral-900
+
+$black: #000;
+
+$red-700: #c7231a;
+$red-500: #de4840;
+$red-400: #f25c54;
+
+:root {
+  --neutral-0: $neutral;
+  --neutral-100: $neutral-100;
+  --neutral-200: $neutral-200;
+  --neutral-300: $neutral-300;
+  --neutral-600: $neutral-600;
+  --neutral-700: $neutral-700;
+  --neutral-800: $neutral-800;
+  --neutral-900: $neutral-900;
+
+  --body-bg: linear-gradient(180deg, #04091b 0%, #091540 100%);
+  --navbar-bg: #202535;
+  --theme-switch-btn-bg: #2f364b;
+  --theme-switch-btn-hover-bg: #535868;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --neutral-0: $neutral-900;
+    --neutral-100: $neutral-800;
+    --neutral-200: $neutral-700;
+    --neutral-300: $neutral-600;
+    --neutral-600: $neutral-300;
+    --neutral-700: $neutral-200;
+    --neutral-800: $neutral-100;
+    --neutral-900: $neutral;
+
+    --body-bg: linear-gradient(180deg, #ebf2fc 0%, #eefbf9 100%);
+    --navbar-bg: #fbfdfe;
+    --theme-switch-btn-bg: #eeeeee;
+    --theme-switch-btn-hover-bg: #c6c6c6;
+  }
+}
 
 *,
 *::after,
@@ -20,12 +69,12 @@ body {
     style: normal;
     variation-settings: "wdth" 100;
   }
-
   min-height: 100vh;
-
   padding: 2.4rem 1.6rem 6.4rem 1.6rem;
-  background-image: vars.$dark-gradient;
-  background-repeat: no-repeat;
+  background: {
+    image: var(--body-bg);
+    repeat: no-repeat;
+  }
 }
 
 @media screen and (min-width: 768px) {
